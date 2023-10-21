@@ -7,8 +7,8 @@ WORKDIR /app
 COPY package*.json ./
 
 # Instala Angular CLI globalmente y las dependencias
-RUN npm install -g @angular/cli@16
-#&& npm install --legacy-peer-deps
+RUN npm install -g @angular/cli@16 \
+    && npm install --legacy-peer-deps
 
 # Copia el código fuente de la aplicación
 COPY . .
